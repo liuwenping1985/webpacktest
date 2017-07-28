@@ -1,0 +1,20 @@
+{
+  "name": "lwp",
+  "version": "1.0.0",
+  "description": "weilelianmeng",
+  "main": "index.js",
+  "scripts": {
+    "wocao": "babel-node script.js",
+    "build": "babel src -d lib"
+  },
+  "author": "liuwenping",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babelify": "^7.3.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.23.0"
+  }
+}

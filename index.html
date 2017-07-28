@@ -1,0 +1,56 @@
+<html>
+    <head></head>
+<script>
+// function f() { console.log('I am outside!'); }
+
+// (function () {
+  
+//     // 重复声明一次函数f
+//     let f = () => { console.log('I am inside!'); }
+  
+//   f();
+// }());
+const log =(...params) =>{
+  console.log([].slice.call(params));
+}
+
+let [foo, [[bar], baz]] = [1, [[2], 3]];
+log(foo,bar,baz);
+
+let [ , , wocao] = ["foo", "bar", "baz"];
+log(wocao)
+
+let [x, , y] = [1, 2, 3];
+log(x,y) 
+
+let [head, ...tail] = [1, 2, 3, 4];
+log(head,tail)
+
+let [m, n, ...q] = ['a'];
+log(m,n,q)
+
+function* fibs() {
+  let a = 0;
+  let b = 1;
+  while (true) {
+    yield a;
+    [a, b] = [b, a + b];
+  }
+}
+
+let [first, second, third, fourth, fifth, sixth] = fibs();
+
+log(sixth)
+
+let [foo1 = true] = [];
+
+log(foo1)
+
+let { bar1, foo2 } = { foo2: "aaa", bar1: "bbb" };
+log(bar1,foo2)
+
+</script>
+<body>
+wocao
+</body>
+</html>
